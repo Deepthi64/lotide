@@ -5,11 +5,12 @@ const assertEqual = function(actual, expected) {
     console.log(`✔️✔️✔️ Assertion Passed: ${actual} === ${expected}`);
   }
 };
-function head(array) {
+const head = function(array) {
+  const firstItem = array[0];
   if (array.length === 0) {
     return undefined;
   }
-  return array[0];
+  return firstItem;
 };
 assertEqual(head([3]), 3);
 assertEqual(head([]), undefined);
